@@ -1,5 +1,1 @@
-RETENTION_DAYS=7
-RETENTION_WEEKS=4
-RETENTION_MONTHS=6
-RETENTION_YEARS=3
-RESTIC_PASSWORD=
+pg_dump -Fc mastodon_production -f /home/mastodon/database_snapshot/database.bak && restic backup -r /backups/mastodon/database --tag systemd.timer /home/mastodon/database_snapshot/database.bak && rm /home/mastodon/database_snapshot/database.bak
