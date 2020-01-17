@@ -1,0 +1,7 @@
+[Unit]
+Description=Backup mastodon database with restic daily
+[Timer]
+OnCalendar=daily
+Persistent=true
+[Install]
+WantedBy=multi-user.target

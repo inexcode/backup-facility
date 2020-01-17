@@ -1,0 +1,7 @@
+[Unit]
+Description=Prune data from the restic repository monthly (Mastodon db)
+[Timer]
+OnCalendar=weekly
+Persistent=true
+[Install]
+WantedBy=multi-user.target

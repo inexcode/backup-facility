@@ -1,0 +1,8 @@
+[Unit]
+Description=Mastodon database backup service (data pruning)
+[Service]
+User=mastodon
+Group=restic
+Type=oneshot
+ExecStart=/usr/bin/restic -r /backups/mastodon/database prune
+EnvironmentFile=/home/mastodon/.config/mastodon-database-backup.conf

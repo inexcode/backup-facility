@@ -1,0 +1,9 @@
+[Unit]
+Description=Pixelfed data backup service
+[Service]
+User=pixelfed
+Group=restic
+Type=oneshot
+ExecStart=/bin/bash /home/pixelfed/backup.sh
+ExecStartPost=/usr/bin/restic forget -r /backups/pixelfed/database --group-by "paths,tags" --keep-daily $RETENTION_DAYS --keep-weekly $RETENTION_WEEKS --keep-monthly $RETENTION_MONTHS --keep-yearly $RETENTION_YEARS
+EnvironmentFile=/home/pixelfed/.config/pixelfed-backup.conf

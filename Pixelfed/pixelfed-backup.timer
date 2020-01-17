@@ -1,0 +1,7 @@
+[Unit]
+Description=Backup pixelfed with restic daily
+[Timer]
+OnCalendar=daily
+Persistent=true
+[Install]
+WantedBy=multi-user.target

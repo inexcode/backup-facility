@@ -1,0 +1,1 @@
+pg_dump -Fc pixelfed -f /home/pixelfed/database.bak && restic backup -r /backups/pixelfed/database --tag systemd.timer.database /home/pixelfed/database.bak && rm /home/pixelfed/database.bak && restic backup -r /backups/pixelfed/database --tag systemd.timer.media /home/pixelfed/pixelfed/storage/app/public

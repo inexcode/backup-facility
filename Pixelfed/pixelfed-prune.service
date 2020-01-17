@@ -1,0 +1,8 @@
+[Unit]
+Description=Pixelfed data backup service (data pruning)
+[Service]
+User=pixelfed
+Group=restic
+Type=oneshot
+ExecStart=/usr/bin/restic -r /backups/pixelfed/database prune
+EnvironmentFile=/home/pixelfed/.config/pixelfed-backup.conf
