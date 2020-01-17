@@ -1,5 +1,5 @@
 [Unit]
-Description=Prune data from the restic repository monthly (pixelfed)
+Description=Prune data from the restic repository weekly (pixelfed)
 [Timer]
 OnCalendar=weekly
 Persistent=true

@@ -1,5 +1,5 @@
 [Unit]
-Description=Prune data from the restic repository monthly (Mastodon db)
+Description=Prune data from the restic repository weekly (Mastodon db)
 [Timer]
 OnCalendar=weekly
 Persistent=true
